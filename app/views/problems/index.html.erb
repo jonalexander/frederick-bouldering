@@ -35,8 +35,7 @@
             <th><strong>Problem</strong></th>
             <th><strong>Grade</strong></th>
             <th><strong>Main Area</strong></th>
-            <th><strong>Description</strong></th>
-            <th colspan="2"><strong>Actions</strong></th>
+            <th colspan="2"><strong>Description</strong></th>
           </tr>
        
           <% @problems.each do |problem| %>
@@ -45,11 +44,11 @@
             <td><%= problem.problem_grade %></td>
             <td><%= problem.main_area %></td>
             <td><%= problem.description %></td>
-            <td><%= link_to 'Show', problem_path(problem) %></td>
+            <!-- <td><%= link_to 'Show', problem_path(problem) %></td> -->
             <td><%= link_to 'Edit', edit_problem_path(problem) %></td>
-            <td><%= link_to 'Delete', problem_path(problem),
+            <!-- <td><%= link_to 'Delete', problem_path(problem),
                     method: :delete,
-                    data: { confirm: 'Are you sure?' } %></td>
+                    data: { confirm: 'Are you sure?' } %></td> -->
           </tr>
           <% end %>
         </table>
