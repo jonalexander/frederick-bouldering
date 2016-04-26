@@ -1,0 +1,62 @@
+<!-- _form.html.erb -->
+<%= form_for @problem do |f| %>
+
+	<!-- form input error message -->
+	<% if @problem.errors.any? %>
+	  <div id="error_explanation">
+	    <h4>
+	      <%= pluralize(@problem.errors.count, "error") %> 
+	      prohibited
+	      this problem from being saved:
+	    </h4>
+	    <ul>
+	      <% @problem.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	    </ul>
+	  </div>
+	<% end %>
+
+	<!-- form labels & text -->
+	<p>
+	  <%= f.label :problem_name %><br>
+	  <%= f.text_field :problem_name %>
+	</p>
+
+	<p>
+		<%= f.label :problem_grade %><br>
+		<%= f.select(:problem_grade, options_for_select(
+		[['V0', 'V0'], ['V1', 'V1'], ['V2', 'V2'], ['V3', 'V3'], ['V4', 'V4'], ['V5', 'V5'], ['V6', 'V6'], ['V7', 'V7'], ['V8', 'V8'], ['V9', 'V9'], ['V10', 'V10'], ['V11', 'V11'], ['V12', 'V12'], ['V13', 'V13'], ['V14', 'V14'], ['V15', 'V15']]
+		), { include_blank: true }) %>
+	</p>
+
+	<p>
+		<%= f.label :main_area %><br>
+		<%= f.select(:main_area, options_for_select(
+			[
+				['Acre', 'Acre'],
+				['Bushwhack', 'Bushwhack'],
+				['Catoctin Mountain', 'Catoctin Mountain'],
+				['Cat Rock', 'Cat Rock'],
+				['Cunningham Falls', 'Cunningham Falls'],
+				['Harpers Ferry', 'Harpers Ferry'],
+				['Manor Campground', 'Manor Campground'],
+				['Middlepoint', 'Middlepoint'],
+				['Radio Towers', 'Radio Towers'],
+				['Sugarloaf', 'Sugarloaf'],
+				['Thurmont Watershed', 'Thurmont Watershed']
+			]), { include_blank: true })
+		%>
+	</p>
+
+	<p>
+	  <%= f.label :description %><br>
+	  <%= f.text_area :description %>
+	</p>
+
+	<p>
+	  <%= f.submit %>
+	</p>
+
+<% end %>
+

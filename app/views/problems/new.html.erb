@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<%= stylesheet_link_tag "style.css" %>
+
+<html>
+	<header></header>
+	<body>
+		<div>
+		  <h1>Add New Problem</h1>
+		</div>
+
+		<!-- body -->
+		<div>
+		  <%= render 'form' %>
+		</div>
+		 
+		 <!-- footer -->
+		<div>
+		  <%= link_to 'Back', problems_path %>
+		</div>
+	</body>
+</html>

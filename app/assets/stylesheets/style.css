@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,800);
+
+/* --- global ---*/
+
+header {
+
+}
+
+body {
+	background: #fff;
+}
+
+p {
+	font: .8em "Open Sans", sans-serif;
+}
+
+h1 {
+	font: bold 2em "Open Sans", sans-serif;
+}
+
+h2 {
+	font: bold 1.4em "Open Sans", sans-serif;
+}
+
+h3 {
+	font: bold 1em "Open Sans", sans-serif;
+
+}
+
+h4 {
+	font: bold .8em "Open Sans", sans-serif;
+
+}
+
+header a {
+	color: #5c5c5c;
+	text-decoration: none;
+}
+
+header a:hover {
+	color: #5c5c5c;
+	text-decoration: underline;
+}
+
+footer {
+	font: .8em "Open Sans", sans-serif;
+	padding: 3px 5px 3px;
+
+}
+
+a {
+	color: #5c5c5c;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #5c5c5c;
+	text-decoration: underline;
+}
+
+
+
+/* --- global classes -- */
+.wrapper {
+	width: 70%;
+	margin: 0 auto;
+	background: #fff;
+	padding: 0 10px 20px;
+	background: #ccc;
+}
+
+.sub_header {
+}
+
+.nav {
+	font: .8em "Open Sans", sans-serif;
+	padding: 0 5px 3px;
+}
+
+.nav a {
+	color: #5c5c5c;
+	text-decoration: none;
+}
+
+.nav a:hover {
+	color: #5c5c5c;
+	text-decoration: underline;
+}
+
+/* --- unique ID's --- */
+
+#table_index {
+	font: .8em "Open Sans", sans-serif;
+	text-align: left;
+	border: 2px #000;
+	background: #fafafa;
+	margin: 0  auto 0 0;
+	width: 100%
+}
+

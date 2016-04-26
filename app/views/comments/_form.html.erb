@@ -1,0 +1,16 @@
+<!-- _form.html.erb -->
+
+<h2>Add a note:</h2>
+<%= form_for([@problem, @problem.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %> 

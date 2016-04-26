@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<%= stylesheet_link_tag "style.css" %>
+
+<html>
+	<header></header>
+	<body>
+		<div>
+			<!-- info -->
+			<p>
+			  <strong>Problem:</strong>
+			  <%= @problem.problem_name %>
+			</p>
+
+			<p>
+				<strong>Grade:</strong>
+				<%= @problem.problem_grade %>
+			</p>
+
+			<p>
+				<strong>Main Area:</strong>
+				<%= @problem.main_area %>
+			</p>
+
+			<p>
+			  <strong>Description:</strong>
+			  <%= @problem.description %>
+			</p>
+
+			<!-- comments -->
+			<h4>Comments</h4>
+
+			<%= render @problem.comments %>
+
+			<%= render 'comments/form' %>
+
+		</div> <!-- close body -->
+
+			<!-- footer -->
+		<div>
+		<%= link_to 'Edit', edit_problem_path(@problem) %>
+		<%= link_to 'Back', problems_path %>
+		<%= link_to 'All Problems', controller: 'problems' %>
+		<%= link_to 'New Problem', new_problem_path %> 
+		</div>
+	</body>
+</html>
