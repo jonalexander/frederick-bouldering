@@ -55,7 +55,10 @@
 	</p>
 
 	<p>
-	  <%= f.submit %>
+	  <%= f.submit "Update" %>
+	  <%= button_to 'Delete', problem_path(@problem),
+          method: :delete,
+          data: { confirm: 'Are you sure?'} %>
 	</p>
 
 <% end %>
