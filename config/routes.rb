@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   ## controller = welcome, action = index
-  root 'welcome#index'
+  root 'problems#index'
 
   ## comments
   resources :problems do
