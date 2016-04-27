@@ -13,3 +13,178 @@
  = require_tree .
  = require_self
  */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,800);
+
+/* --- global ---*/
+
+header {
+	float: left;
+	overflow: auto;
+	width: 100%;
+
+}
+
+.header_text {
+	font: bold 1.4em "Open Sans", sans-serif;
+	float: left;
+	display: inline;
+	width: 75%;
+}
+
+.login_signup {
+	font: .7em "Open Sans", sans-serif;
+	display: inline;
+	text-align: right;
+	width: 25%;
+	float: right;
+}
+
+header a {
+	color: #000;
+	text-decoration: none;
+}
+
+header a:hover {
+	color: #85361C;
+	text-decoration: none;
+}
+
+body {
+	background: #fff;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #808080;
+	text-decoration: none;
+}
+
+footer {
+	font: .8em "Open Sans", sans-serif;
+	padding-top: .7em;
+}
+
+footer a {
+	color: #808080;
+}
+
+footer a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+p {
+	font: .8em "Open Sans", sans-serif;
+}
+
+h1 {
+	font: bold 2em "Open Sans", sans-serif;
+}
+
+h2 {
+	font: bold 1.4em "Open Sans", sans-serif;
+}
+
+h3 {
+	font: bold 1em "Open Sans", sans-serif;
+}
+
+h4 {
+	font: bold .8em "Open Sans", sans-serif;
+}
+
+
+/* --- table --- */
+
+table tr.oddrow {
+  background-color: #fff;
+}
+
+table tr.evenrow {
+  background-color: #F7F7F7;
+}
+
+
+/* --- global classes -- */
+.wrapper {
+	width: 60%;
+	margin: 0 auto;
+	padding: 10px;
+	padding-bottom: 10px;
+	background: #DAE0E6;
+  border-radius: 10px;
+  border: 0em solid #fff;
+}
+
+.inner_wrapper {
+	width: 100%;
+	margin: 0 auto;
+	padding: 2px 10px 20px;
+}
+
+.navbar {
+	position: relative;
+	width: 100%;
+	min-height: 2em;
+	clear: both;
+}
+
+.nav {
+	display: inline;
+	position: absolute;
+	float: left;
+	font: .8em "Open Sans", sans-serif;
+}
+
+.nav a {
+	color: #808080;
+	text-decoration: none;
+}
+
+.nav a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+.sub_header {
+	display: inline;
+	position: absolute;
+	float: left;
+	font: bold 1em "Open Sans", sans-serif;
+	overflow: auto;
+	left: 0;
+	bottom: 0px;
+}
+
+.top {
+	right: 0;
+	bottom: 0px;
+}
+
+#bottom {
+	float: right;
+}
+
+/* --- unique ID's --- */
+
+#table_index {
+	font: .8em "Open Sans", sans-serif;
+	text-align: left;
+	background: #fafafa;
+	margin: 0 auto 0 0;
+	width: 100%;
+}
+
+#edit {
+	font-size: .4em;
+}
+
+#grade {
+	font-size: .7em;
+	display: inline;
+}

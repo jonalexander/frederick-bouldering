@@ -1,64 +1,21 @@
-<!DOCTYPE html>
+<section class="problem_display">
+	<p>
+		<strong>Main Area:</strong>
+		<%= @problem.main_area %>
+	</p>
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Frederick Bouldering</title>
-    <%= stylesheet_link_tag "style.css" %>
-  </head>
+	<p>	
+	  <strong>Description:</strong>
+	  <%= @problem.description %>
+	  <br><br><br>
+	  <%= link_to 'Edit', edit_problem_path(@problem) %>
+	</p>
 
-  <body>
-    <div class="wrapper">
+	<hr>
 
-      <header>
-        <a href="/">Frederick Bouldering</a>
-      </header>
-
-      <section class="navbar">
-        <div class="sub_header"> 
-        	<%= @problem.problem_name %> - 
-        	<%= @problem.problem_grade %>
-        </div>
-
-        <div class="nav right top">
-          <%= link_to 'Add Problem', new_problem_path %>
-        </div>
-      </section>
-
-
-		<section class="problem_display">
-			<p>
-				<strong>Main Area:</strong>
-				<%= @problem.main_area %>
-			</p>
-
-			<p>	
-			  <strong>Description:</strong>
-			  <%= @problem.description %>
-			  <br><br><br>
-			  <%= link_to 'Edit', edit_problem_path(@problem) %>
-			</p>
-
-			<hr>
-
-			<!-- comments -->
-			<h4>Comments</h4>
-
-			<%= render @problem.comments %>
-
-			<%= render 'comments/form' %>
-		</section>
-
-		<footer>
-		<%= link_to 'Back', problems_path %> - 
-		<%= link_to 'All Problems', controller: 'problems' %> - 
-		<%= link_to 'Add Problem', new_problem_path %>
-
-		</footer>
-
-		</div> <!-- close container -->
-
-			<!-- footer -->
-    
-	</body>
-</html>
+	<div id="comments">
+		<h4>Comments</h4>
+		<%= render @problem.comments %>
+		<%= render 'comments/form' %>
+	</div>
+</section>

@@ -1,36 +1,6 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Frederick Bouldering</title>
-    <%= stylesheet_link_tag "style.css" %>
-  </head>
-
-  <body>
-    <div class="wrapper">
-
-      <header>
-        <a href="/">Frederick Bouldering</a>
-      </header>
-
-      <section class="navbar">
-        <div class="sub_header"> Edit: <%= @problem.problem_name %> </div><br>
-      </section>
-		 
-		<div>
-		  <%= render 'form' %>
-			<%= button_to 'Delete', problem_path(@problem),
-          method: :delete,
-          data: { confirm: 'Are you sure?'} %>
-		</div>
-		 
-    <footer>
-    <%= link_to 'Back', problems_path %> - 
-    <%= link_to 'All Problems', controller: 'problems' %> - 
-    <%= link_to 'Add Problem', new_problem_path %>
-    </footer>
-	</body>
-</html>	
-
-            <!-- <td></td> -->
+<div>
+  <%= render 'form' %>
+  <%= button_to 'Delete', problem_path(@problem),
+  method: :delete,
+  data: { confirm: 'Are you sure?'} %>
+</div>

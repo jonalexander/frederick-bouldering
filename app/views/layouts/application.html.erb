@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <%= stylesheet_link_tag "filename" %>
 <html>
-<head>
-  <title>FrederickBouldering</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-<%= yield %>
+	<head>
+	  <title>Frederick Bouldering</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="wrapper">
 
-</body>
+	    <header>
+	    	<div class="header_text">
+	    		<a href="/"> Frederick Bouldering </a>
+	    	</div>
+
+				<div class="login_signup">
+					<%= link_to 'Login', new_user_session_path %>
+					&nbsp; | &nbsp;
+					<%= link_to 'Sign Up', new_user_registration_path %>
+				</div>
+	    </header>
+
+	    <div class="navbar">
+	      <div class="sub_header"> All Problems </div>
+	      <div class="nav right top">
+	        <%= link_to 'Add Problem', new_problem_path %>
+	      </div>
+	    </div>
+
+			<p class="notice"><%= notice %></p>
+			<p class="alert"><%= alert %></p>
+
+			<%= yield %>
+
+			<footer>
+				<%= link_to 'Back', :back %>
+				&nbsp;&nbsp;
+				<%= link_to 'All Problems', problems_path %>
+				&nbsp;&nbsp;
+				<%= link_to 'Add Problem', new_problem_path %>
+			</footer>
+		</div> <!-- close wrapper -->
+	</body>
 </html>

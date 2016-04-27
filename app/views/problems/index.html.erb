@@ -1,58 +1,25 @@
-<!DOCTYPE html>
+<div id="all_problems">
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Frederick Bouldering</title>
-    <%= stylesheet_link_tag "style.css" %>
-  </head>
+  <table id="table_index">
+    <tr>
+      <th width="35%" colspan="2"><strong>Problem</strong></th>
+      <th width="20%"><strong>Main Area</strong></th>
+      <th width="40%"><strong>Description</strong></th>
+      <th width="5%"></th>
+    </tr>
+ 
+    <% @problems.each do |problem| %>
+      <tr class="<%= cycle('oddrow', 'evenrow') -%>">
 
-  <body>
-    <div class="wrapper">
+        <td width="5%"><div id="grade"> <%= problem.problem_grade %>
+          </div></td>
+        <td><%= link_to problem.problem_name, problem_path(problem) %></td>
+        <td><%= problem.main_area %></td>
+        <td><%= problem.description %></td>
+        <td><div id="edit">
+          <%= link_to 'Edit', edit_problem_path(problem) %></div></td>
+      </tr>
+    <% end %>
+  </table>
+</div>  <!-- close div all_problems -->
 
-      <header>
-        <a href="/">Frederick Bouldering</a>
-      </header>
-
-      <section class="navbar">
-        <div class="sub_header"> All Problems </div>
-
-        <div class="nav right top">
-          <%= link_to 'Add Problem', new_problem_path %>
-        </div>
-      </section>
-
-      <!-- bouldering problems / all -->
-      <div id="all_problems">
-  
-        <table id="table_index">
-          <tr>
-
-            <th width="35%" colspan="2"><strong>Problem</strong></th>
-            <th width="20%"><strong>Main Area</strong></th>
-            <th width="40%"><strong>Description</strong></th>
-            <th width="5%"></th>
-          </tr>
-       
-          <% @problems.each do |problem| %>
-            <tr class="<%= cycle('oddrow', 'evenrow') -%>">
-
-              <td width="5%"><div id="grade"> <%= problem.problem_grade %>
-                </div></td>
-              <td><%= link_to problem.problem_name, problem_path(problem) %></td>
-              <td><%= problem.main_area %></td>
-              <td><%= problem.description %></td>
-              <td><div id="edit">
-                <%= link_to 'Edit', edit_problem_path(problem) %></div></td>
-            </tr>
-          <% end %>
-        </table>
-      </div>  <!-- close div all_problems -->
-      
-      <div class="nav bottom">
-        <%= link_to 'Add Problem', new_problem_path %>
-      </div>
-
-    </div> <!-- close wrapper -->
-  </body>
-</html>
