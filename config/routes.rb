@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   ## boulder problems will be the standard REST resource
   resources :problems
 
