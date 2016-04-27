@@ -29,15 +29,16 @@ header {
 	font: bold 1.4em "Open Sans", sans-serif;
 	float: left;
 	display: inline;
-	width: 75%;
+	width: 100%;
 }
 
 .login_signup {
-	font: .7em "Open Sans", sans-serif;
+	font: .5em "Open Sans", sans-serif;
 	display: inline;
 	text-align: right;
-	width: 25%;
+	width: 100%;
 	float: right;
+	max-height: 2px;
 }
 
 header a {

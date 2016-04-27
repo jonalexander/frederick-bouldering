@@ -11,10 +11,6 @@
 		<div class="wrapper">
 
 	    <header>
-	    	<div class="header_text">
-	    		<a href="/"> Frederick Bouldering </a>
-	    	</div>
-
 				<div class="login_signup">
 					<%= link_to 'Login', new_user_session_path %>
 					&nbsp; | &nbsp;
@@ -22,9 +18,11 @@
 					&nbsp; | &nbsp;
 					<%= link_to 'Sign Out',destroy_user_session_path %>
 				</div>
+	    
+	    	<div class="header_text">
+	    		<a href="/"> Frederick Bouldering </a>
+	    	</div>
 	    </header>
-
-
 
 			<p class="notice"><%= notice %></p>
 			<p class="alert"><%= alert %></p>
