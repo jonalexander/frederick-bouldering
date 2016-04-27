@@ -1,10 +1,12 @@
 class ProblemsController < ApplicationController  
   
-  http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
+  # http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
   # Other authentication methods are available for Rails 
   # applications. Two popular authentication add-ons for 
   # Rails are the Devise rails engine and the Authlogic gem, 
   # along with a number of others.
+
+before_action :authenticate_user!, :except => [:show, :index]
 
   def index
   	@problems = Problem.all
