@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<%= stylesheet_link_tag "style.css" %>
 
 <html>
   <head>
@@ -12,51 +11,48 @@
     <div class="wrapper">
 
       <header>
-        <h2><a href="#">Frederick Bouldering</a></h2>
+        <a href="/">Frederick Bouldering</a>
       </header>
 
-      <section class="sub_header">
+      <section class="navbar">
+        <div class="sub_header"> All Problems </div>
 
-        <h3>All Problems</h3>
-
-      </section>
-
-      <section class="nav">
-  
-        <%= link_to 'Add New Problem', new_problem_path %> 
-
+        <div class="nav right top">
+          <%= link_to 'Add Problem', new_problem_path %>
+        </div>
       </section>
 
       <!-- bouldering problems / all -->
-      <section id="all_problems">
+      <div id="all_problems">
   
         <table id="table_index">
           <tr>
-            <th><strong>Problem</strong></th>
-            <th><strong>Grade</strong></th>
-            <th><strong>Main Area</strong></th>
-            <th colspan="2"><strong>Description</strong></th>
+
+            <th width="35%" colspan="2"><strong>Problem</strong></th>
+            <th width="20%"><strong>Main Area</strong></th>
+            <th width="40%"><strong>Description</strong></th>
+            <th width="5%"></th>
           </tr>
        
           <% @problems.each do |problem| %>
-          <tr>
-            <td><%= link_to problem.problem_name, problem_path(problem) %></td>
-            <td><%= problem.problem_grade %></td>
-            <td><%= problem.main_area %></td>
-            <td><%= problem.description %></td>
-            <!-- <td><%= link_to 'Show', problem_path(problem) %></td> -->
-            <td><%= link_to 'Edit', edit_problem_path(problem) %></td>
-          </tr>
+            <tr class="<%= cycle('oddrow', 'evenrow') -%>">
+
+              <td width="5%"><div id="grade"> <%= problem.problem_grade %>
+                </div></td>
+              <td><%= link_to problem.problem_name, problem_path(problem) %></td>
+              <td><%= problem.main_area %></td>
+              <td><%= problem.description %></td>
+              <td><div id="edit">
+                <%= link_to 'Edit', edit_problem_path(problem) %></div></td>
+            </tr>
           <% end %>
         </table>
-
-      </section>  <!-- close all_problems -->
-
-      <footer>
-
-        <%= link_to 'Add New Problem', new_problem_path %> 
+      </div>  <!-- close div all_problems -->
       
-      </footer>
+      <div class="nav bottom">
+        <%= link_to 'Add Problem', new_problem_path %>
+      </div>
+
     </div> <!-- close wrapper -->
   </body>
 </html>

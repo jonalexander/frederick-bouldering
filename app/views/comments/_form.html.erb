@@ -1,14 +1,12 @@
 <!-- _form.html.erb -->
-
-<h2>Add a note:</h2>
 <%= form_for([@problem, @problem.comments.build]) do |f| %>
   <p>
-    <%= f.label :commenter %><br>
+    <%= f.label "Name" %>: <br>
     <%= f.text_field :commenter %>
   </p>
   <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.label "Message" %>: <br>
+    <%= f.text_area :body, cols: "40", rows: "10" %>
   </p>
   <p>
     <%= f.submit %>

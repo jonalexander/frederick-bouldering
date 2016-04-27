@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<%= stylesheet_link_tag "style.css" %>
 
 <html>
-	<header></header>
-	<body>
-		<div>
-		  <h1>Edit Boulder Problem</h1>
-		</div>
+  <head>
+    <meta charset="utf-8">
+    <title>Frederick Bouldering</title>
+    <%= stylesheet_link_tag "style.css" %>
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+      <header>
+        <a href="/">Frederick Bouldering</a>
+      </header>
+
+      <section class="navbar">
+        <div class="sub_header"> Edit: <%= @problem.problem_name %> </div><br>
+      </section>
 		 
 		<div>
 		  <%= render 'form' %>
@@ -15,9 +25,11 @@
           data: { confirm: 'Are you sure?'} %>
 		</div>
 		 
-		<div> 
-		<%= link_to 'Back', problem_path %>
-		</div>
+    <footer>
+    <%= link_to 'Back', problems_path %> - 
+    <%= link_to 'All Problems', controller: 'problems' %> - 
+    <%= link_to 'Add Problem', new_problem_path %>
+    </footer>
 	</body>
 </html>	
 

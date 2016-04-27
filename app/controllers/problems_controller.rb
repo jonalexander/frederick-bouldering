@@ -30,7 +30,7 @@ class ProblemsController < ApplicationController
     else
     	render 'new'
     end
-  end #close create
+  end 
 
   def update
     @problem = Problem.find(params[:id])

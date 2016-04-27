@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<%= stylesheet_link_tag "style.css" %>
 
 <html>
-	<header></header>
-	<body>
-		<div>
-		  <h1>Add New Problem</h1>
-		</div>
+  <head>
+    <meta charset="utf-8">
+    <title>Frederick Bouldering</title>
+    <%= stylesheet_link_tag "style.css" %>
+  </head>
 
-		<!-- body -->
-		<div>
-		  <%= render 'form' %>
-		</div>
-		 
-		 <!-- footer -->
-		<div>
-		  <%= link_to 'Back', problems_path %>
-		</div>
+	<body>
+		<div class="wrapper">
+
+      <header>
+      	<a href="/">Frederick Bouldering</a>
+      </header>
+
+			<div class="navbar">
+	      <div class="sub_header"> Add New Problem </div>
+	     </div>
+
+			<div><%= render 'form' %></div>
+			 
+			<footer>
+			<%= link_to 'Back', problems_path %> - 
+			<%= link_to 'All Problems', controller: 'problems' %> - 
+			<%= link_to 'Add Problem', new_problem_path %>
+			</footer>
+
+		</div> <!-- close wrapper -->
 	</body>
 </html>
