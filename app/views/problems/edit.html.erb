@@ -1,3 +1,9 @@
+<div class="navbar">
+  <div class="sub_header"> Edit <%= @problem.problem_name %> </div>
+  <div class="nav right top">
+    <%= link_to 'Add Problem', new_problem_path %>
+  </div>
+</div>
 <div>
   <%= render 'form' %>
   <%= button_to 'Delete', problem_path(@problem),
