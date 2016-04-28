@@ -53,7 +53,7 @@ before_action :authenticate_user!, :except => [:show, :index]
 
   private 
     def problem_params
-      params.require(:problem).permit(:problem_name, :problem_grade, :main_area, :description)
+      params.require(:problem).permit(:problem_name, :problem_grade, :main_area, :description, :image)
     end
 end	
 

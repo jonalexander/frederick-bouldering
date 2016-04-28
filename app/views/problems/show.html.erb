@@ -2,22 +2,28 @@
 
   <div class="sub_header"><%= @problem.problem_name %></div>
   <div class="nav right top">
-    <%= link_to 'Add Problem', new_problem_path %>
+    <%= link_to 'Edit Problem', edit_problem_path(@problem) %>
   </div>
-  
 </div>
 
-<section class="problem_display">
-	<p>
-		<strong>Main Area:</strong>
-		<%= @problem.main_area %>
-	</p>
+<div class="problem_display">
+	<div class="left_display">
+		<p>
+			<strong>Main Area:</strong>
+			<%= @problem.main_area %>
+		</p>
 
-	<p>	
-	  <strong>Description:</strong>
-	  <%= @problem.description %>
-	  <br><br><br>
-	  <%= link_to 'Edit', edit_problem_path(@problem) %>
+		<p>	
+		  <strong>Description:</strong>
+		  <%= @problem.description %>
+		</p>
+	</div>
+
+	<div class="right_display">
+	<p><strong>Photos:</strong></p>
+	<p>
+		<%= image_tag @problem.image.url(:medium) %>
+		<!-- :medium, :thumb -->
 	</p>
 
 	<hr>

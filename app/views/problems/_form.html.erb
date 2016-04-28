@@ -1,5 +1,5 @@
 <!-- _form.html.erb -->
-<%= form_for @problem do |f| %>
+<%= form_for @problem, html: { multipart: true } do |f| %>
 
 	<!-- form input error message -->
 	<% if @problem.errors.any? %>
@@ -39,6 +39,11 @@
 	  <%= f.text_area :description %>
 	</p>
 
+	<p>
+		
+	</p>
+	  <%= f.label :image %><br>
+	  <%= f.file_field :image %>
 	<p>
 	  <%= f.submit "Update" %>
 	</p>
