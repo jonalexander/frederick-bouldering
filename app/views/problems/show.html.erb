@@ -20,10 +20,13 @@
 	</div>
 
 	<div class="right_display">
-	<p><strong>Photos:</strong></p>
 	<p>
-		<%= image_tag @problem.image.url(:medium) %>
-		<!-- :medium, :thumb -->
+		<% if @problem.image.file? %>
+			<p><strong>Photos:</strong></p>
+	  	<%= image_tag @problem.image.url(:medium) %>
+		<% else %>
+	  	<%= link_to 'Add Photo', edit_problem_path(@problem) %>
+		<% end %>
 	</p>
 
 	<hr>
