@@ -26,7 +26,9 @@
         <td><%= problem.main_area %></td>
         <td><%= problem.description %></td>
         <td><div id="edit">
-          <%= link_to 'Edit', edit_problem_path(problem) %></div></td>
+          <%= link_to 'Edit', edit_problem_path(problem) %>
+          <%= link_to 'Del', problem_path(problem), method: :delete %>
+          </div></td>
       </tr>
     <% end %>
   </table>
