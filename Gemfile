@@ -15,10 +15,11 @@ group :development do
 	gem 'rails_layout'
 end
 
-# devise
+# devise (auth)
 gem 'devise'
 
-
+# paperclip (image uploads)
+gem 'paperclip', '~> 5.0.0.beta1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
