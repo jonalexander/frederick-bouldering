@@ -21,6 +21,9 @@ gem 'devise'
 # paperclip (image uploads)
 gem 'paperclip', '~> 5.0.0.beta1'
 
+# s3
+gem 'aws-sdk'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
