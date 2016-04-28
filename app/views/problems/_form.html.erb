@@ -19,32 +19,32 @@
 
 	<!-- form labels & text -->
 	<p>
-	  <%= f.label :problem_name %><br>
+	  <%= f.label 'Name:' %>
 	  <%= f.text_field :problem_name %>
 	</p>
 
 	<p>
-		<%= f.label :problem_grade %><br>
+		<%= f.label 'Grade:' %>
 		<%= f.select(:problem_grade, options_for_select(v_scale, :selected => f.object.problem_grade)) %>
 	</p>
 
 	<p>
-		<%= f.label :main_area %><br>
+		<%= f.label 'Main Area:' %>
 		<%= f.select(:main_area, options_for_select(main_areas, :selected => f.object.main_area), {})
 		%>
 	</p>
 
 	<p>
-	  <%= f.label :description %><br>
+	  <%= f.label 'Description:' %><br>
 	  <%= f.text_area :description %>
 	</p>
 
 	<p>
-	  <%= f.label :image %><br>
+	  <%= f.label 'Photos:' %><br>
 	  <%= f.file_field :image %>
 	</p>
 
-	<p><%= f.submit "Update" %></p>
+	<p><%= f.submit "Submit" %></p>
 
 <% end %>
 
