@@ -122,7 +122,8 @@ table tr.evenrow {
 	margin: 0 auto;
 	padding: 10px;
 	padding-bottom: 10px;
-	background: #DAE0E6;
+	/* background: #DAE0E6; */
+	background: #eee;
   border-radius: 10px;
   border: 0em solid #fff;
 }

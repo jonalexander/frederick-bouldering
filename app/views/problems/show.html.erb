@@ -1,6 +1,6 @@
 <div class="navbar">
 
-  <div class="sub_header"><%= @problem.problem_name %></div>
+  <div class="sub_header"><%= @problem.problem_name %> <%= @problem.problem_grade %></div>
   <div class="nav right top">
     <%= link_to 'Edit Problem', edit_problem_path(@problem) %>
   </div>
