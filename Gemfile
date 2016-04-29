@@ -20,7 +20,7 @@ gem 'devise'
 # paperclip (image uploads)
 gem 'paperclip', '~> 5.0.0.beta1'
 
-# s3
+# s3 aws (image storage)
 gem 'aws-sdk'
 # may need to specify version
 
