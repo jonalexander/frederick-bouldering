@@ -21,8 +21,10 @@ gem 'devise'
 gem 'paperclip', '~> 5.0.0.beta1'
 
 # s3 aws (image storage)
-gem 'aws-sdk'
-# may need to specify version
+gem 'aws-sdk', '~> 2'
+
+# protecting secret keys (for s3)
+#gem 'figaro'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
