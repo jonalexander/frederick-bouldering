@@ -12,7 +12,6 @@
 
 	    <header>
 				<div class="login_signup">
-
 					<% if user_signed_in? %>
 						<%= current_user.email %> | 
 						<%= link_to 'Sign Out',destroy_user_session_path, method: :delete %>
@@ -21,16 +20,14 @@
 						&nbsp; | &nbsp;
 						<%= link_to 'Sign Up', new_user_registration_path %>
  					<% end %>
-					
 				</div>
 	    
 	    	<div class="header_text">
-	    		<a href="/"> Frederick Bouldering </a>
+	    		<a href="/">Frederick Bouldering</a>
+	    		<div class="notice"><%= notice %></div>
+					<div class="alert"><%= alert %></div>
 	    	</div>
 	    </header>
-
-			<p class="notice"><%= notice %></p>
-			<p class="alert"><%= alert %></p>
 
 			<%= yield %>
 
