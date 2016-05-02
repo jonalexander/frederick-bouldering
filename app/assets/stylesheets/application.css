@@ -211,7 +211,7 @@ table tr.evenrow {
 }
 
 #title {
-	font: .9em "Open Sans", sans-serif;
+	font: .9em bold "Open Sans", sans-serif;
 	padding-bottom: .4em;
 	padding-top: .6em;
 }
