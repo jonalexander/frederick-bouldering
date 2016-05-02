@@ -6,6 +6,7 @@
 </div>
 <div>
   <%= render 'form' %>
-  <%= button_to 'Delete', problem_path(@problem), method: :delete %>
+  <%= button_to 'Delete', problem_path(@problem), method: :delete,
+  	data: { confirm: 'Are you sure?'}%>
   <!-- #data: { confirm: 'Are you sure?'} ->
 </div>
