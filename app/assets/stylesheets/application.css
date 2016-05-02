@@ -233,6 +233,7 @@ table tr.evenrow {
 #edit {
 	font-size: .4em;
 	text-align: left;
+	padding-bottom: 15px;
 }
 
 #grade {
