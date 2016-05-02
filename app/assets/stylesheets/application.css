@@ -213,6 +213,7 @@ table tr.evenrow {
 #title {
 	font: .9em "Open Sans", sans-serif;
 	padding-bottom: .4em;
+	padding-top: .6em;
 }
 
 #description {
@@ -233,7 +234,7 @@ table tr.evenrow {
 #edit {
 	font-size: .4em;
 	text-align: left;
-	padding-bottom: 15px;
+	padding-bottom: 1em;
 }
 
 #grade {
