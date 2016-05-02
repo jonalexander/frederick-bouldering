@@ -11,12 +11,28 @@
 
   <table id="table_index">
     <tr>
-      <th width="35%" colspan="2"><strong>Problem</strong></th>
-      <th width="20%"><strong>Main Area</strong></th>
-      <th width="40%"><strong>Description</strong></th>
-      <th width="5%"></th>
+      <th width="35%" colspan="1"><strong>Problem</strong></th>
     </tr>
- 
+ <!-- copy & paste -->
+    <% @problems.each do |problem| %>
+      <tr class="<%= cycle('oddrow', 'evenrow') -%>">
+        <td>
+          <p>
+          <%= link_to problem.problem_name, problem_path(problem)  %> <%= problem.problem_grade %> -  <%= problem.main_area %>
+          </p>
+          <p><%= problem.description %></p>
+          <p align="right"><%= link_to 'Edit', edit_problem_path(problem) %> | 
+          <%= link_to 'Delete', problem_path(problem), method: :delete %></p>
+        </td>
+      </tr>
+    <% end %>
+  <!-- copy & paste -->
+  </table>
+</div>  <!-- close div all_problems -->
+
+
+<!-- 
+
     <% @problems.each do |problem| %>
       <tr class="<%= cycle('oddrow', 'evenrow') -%>">
 
@@ -31,6 +47,5 @@
           </div></td>
       </tr>
     <% end %>
-  </table>
-</div>  <!-- close div all_problems -->
 
+-->
