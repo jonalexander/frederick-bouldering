@@ -14,11 +14,11 @@
     <% @problems.each do |problem| %>
       <tr class="<%= cycle('oddrow', 'evenrow') -%>">
         <td>
-          <p>
-          <%= link_to problem.problem_name, problem_path(problem)  %> <%= problem.problem_grade %> -  <%= problem.main_area %>
-          </p>
-          <p><%= problem.description %></p>
-          <p align="right"><%= link_to 'Edit', edit_problem_path(problem) %></p>
+          <div id="title">
+          <%= link_to problem.problem_name, problem_path(problem)  %> <%= link_to problem.problem_grade, problem_path(problem) %> - @<%= problem.main_area %>
+          </div>
+          <div id="description"><%= problem.description %></div>
+          <div id="edit"><%= link_to 'Edit', edit_problem_path(problem) %></div>
         </td>
       </tr>
     <% end %>

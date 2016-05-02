@@ -210,9 +210,29 @@ table tr.evenrow {
 	padding-top: 0px;
 }
 
+#title {
+	font: .9em "Open Sans", sans-serif;
+	padding-bottom: .4em;
+}
+
+#description {
+	font: .9em "Open Sans", sans-serif;
+	padding-bottom: .4em;
+}
+
+#title a {
+	color: #85361C;
+	text-decoration: none;
+}
+
+#title a:hover {
+	color: #000;
+	text-decoration: none;
+}
 
 #edit {
 	font-size: .4em;
+	text-align: left;
 }
 
 #grade {
