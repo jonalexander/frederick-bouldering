@@ -22,7 +22,6 @@ header {
 	float: left;
 	overflow: auto;
 	width: 100%;
-
 }
 
 .header_text {
@@ -144,7 +143,6 @@ table tr.evenrow {
 	float: left;
 	box-sizing: border-box;
 	box-sizing: content-box;
-
 }
 
 .navbar {
@@ -160,7 +158,6 @@ table tr.evenrow {
 	float: left;
 	font: .7em "Open Sans", sans-serif;
 	padding-bottom: .1em;
-	clear
 }
 
 .nav a {
@@ -208,7 +205,7 @@ table tr.evenrow {
 #index_container {
 	width: 100%;
 	float: left;
-	min-height: 100px
+	min-height: 100px;
 	margin: 2px 5px 5px 5px;
 	padding-top: 0px;
 }
