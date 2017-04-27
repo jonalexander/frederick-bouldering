@@ -1,12 +1,1 @@
-README
-======
-
-Frederick Bouldering 2016
-
-Author: Jonathan Alexander
-Email: jonathanDalexander@gmail.com
-
-Frederick Bouldering is a project to document all climbing development in and around Frederick, Maryland.
-
-======
 
